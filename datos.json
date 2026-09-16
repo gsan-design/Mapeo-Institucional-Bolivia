@@ -1,0 +1,79 @@
+[
+ {
+  "nombre": "SAT (Servicio Asistencia Técnica)",
+  "periodo": "1997-2005",
+  "descripcion": "Programa estatal de capacitación y asistencia técnica para micro y pequeñas empresas manufactureras y turísticas. Funcionó mediante un sistema de bonos que otorgaba libertad de elección al productor",
+  "categoria": "Asistencia técnica, incubación y fortalecimiento de capacidades",
+  "categorias_sec": "",
+  "problemas": [
+   {
+    "texto": "Gestión empresarial y habilidades gerenciales deficientes: Existían marcadas debilidades en la capacidad gerencial, contable, administrativa y de mercado en los micro y pequeños empresarios y artesanos",
+    "hipotesis": "Al implementar un sistema de bonos subsidiados entregados directamente al microempresario, se le permite contratar capacitaciones en gestión y contabilidad a medida, adquiriendo competencias gerenciales directas",
+    "instrumentos": [
+     {
+      "nombre": "Sistema de Bonos subsidiados",
+      "descripcion": "Vouchers emitidos por el Estado para cofinanciar capacitaciones a demanda del productor"
+     },
+     {
+      "nombre": "Registro de Instituciones de Capacitación (ICAPs)",
+      "descripcion": "Padrón de consultores y centros privados acreditados"
+     },
+     {
+      "nombre": "Programa \"Mejorar\"",
+      "descripcion": "Módulo especializado en bonos para capacitación técnica en oficio y gestión"
+     }
+    ]
+   },
+   {
+    "texto": "Trámites y burocracia estatal: El sector industrial enfrentaba impedimentos burocráticos y procesos lentos que frenaban la modernización y la iniciativa empresarial",
+    "hipotesis": "Al desconcentrar operativamente los servicios e implementar un registro simplificado mediante Cédula Empresarial, se reducen los costos de transacción y tiempos administrativos para la modernización.",
+    "instrumentos": [
+     {
+      "nombre": "Programa \"Informar\"",
+      "descripcion": "Difusión institucional y ventanilla de atención al microempresario"
+     },
+     {
+      "nombre": "Cédula Empresarial",
+      "descripcion": "Acreditación única e identificación simplificada del beneficiario"
+     },
+     {
+      "nombre": "Oficinas Regionales Desconcentradas",
+      "descripcion": "Unidades territoriales operativas instaladas a nivel nacional"
+     }
+    ]
+   },
+   {
+    "texto": "Inexistencia de un mercado de servicios no financieros: Carecía un mercado transparente y competitivo de consultoría privada y capacitación adaptado a las demandas reales de las micro y pequeñas empresas",
+    "hipotesis": "Al actuar como entidad pública de \"tercer piso\" que acredita e intermedia recursos hacia consultores privados e institutos (ICAPs), se estimula la oferta privada y competitiva de servicios empresariales.",
+    "instrumentos": [
+     {
+      "nombre": "Mecanismo Institucional de Tercer Piso",
+      "descripcion": "Administración delegada donde el Estado norma y financia, mientras privados ejecutan"
+     },
+     {
+      "nombre": "Programa \"Apoyo a la Oferta\"",
+      "descripcion": "Bonos para la actualización y certificación de consultores privados"
+     }
+    ]
+   },
+   {
+    "texto": "Improvisación y elevada mortalidad de negocios: Los emprendimientos nacían con visión de corto plazo y sin acompañamiento técnico, provocando la pérdida prematura de capital",
+    "hipotesis": "Al estructurar módulos secuenciales (Emprender, Mejorar, Innovar, Asociar), se acompaña al emprendedor con diagnósticos y planes de desarrollo de largo plazo que evitan la quiebra prematura.",
+    "instrumentos": [
+     {
+      "nombre": "Programa \"Emprender\"",
+      "descripcion": "Bonos de financiamiento para tutores dedicados al diseño del plan empresarial"
+     },
+     {
+      "nombre": "Programa \"Innovar\"",
+      "descripcion": "Diagnóstico integral de producción, contabilidad y plan de desarrollo"
+     },
+     {
+      "nombre": "Programas \"Asociar\" y \"Mercados\"",
+      "descripcion": "Bonos para diagnósticos asociativos, consorcios y participación en ferias"
+     }
+    ]
+   }
+  ]
+ }
+]
