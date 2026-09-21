@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapeo Institucional de Apoyo a PYMES</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero-header">
+      <h1 id="dashboard-title">Mapeo Institucional de Apoyo a PYMES</h1>
+      <p id="dashboard-updated">Actualizado: 21 de septiembre de 2026</p>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="card evolution-card">
+        <div class="card-pill">Evolución y duración de programas e instrumentos</div>
+        <div id="timelineChart" class="timeline-chart"></div>
+        <p class="card-note">Cada barra muestra el período de implementación registrado. Los programas vigentes se extienden hasta 2026; los períodos expresados sólo en meses se estiman desde el año de creación.</p>
+      </section>
+
+      <section class="card recurrence-card">
+        <div class="card-pill">Recurrencia de problemas por categoría</div>
+        <div class="table-scroll">
+          <table class="data-table compact-table" id="recurrenceTable">
+            <thead><tr><th>Categoría</th><th>Problemas</th><th>% recurrencia</th><th>Soluciones</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="card-note">Haz clic en el número de problemas o soluciones para ver el detalle de la categoría.</p>
+      </section>
+
+      <aside class="card quality-card">
+        <div class="card-pill">Nivel de confianza</div>
+        <div class="badge-label">Calidad de información</div>
+        <div class="gauge-wrapper">
+          <svg class="confidence-gauge" viewBox="0 0 220 125" aria-label="Nivel de confianza">
+            <path class="gauge-track" pathLength="100" d="M20 105 A90 90 0 0 1 200 105"></path>
+            <path id="gaugeProgress" class="gauge-progress" pathLength="100" d="M20 105 A90 90 0 0 1 200 105"></path>
+            <text id="confidenceValue" x="110" y="92" text-anchor="middle" class="gauge-text">0%</text>
+          </svg>
+        </div>
+        <p class="confidence-note" id="impactNote"></p>
+
+        <div class="badge-label second-badge">Completitud de la información</div>
+        <div class="quality-metric-line"><span class="metric-strong" id="completenessValue">0%</span><span class="metric-sub">promedio de completitud documental</span></div>
+        <table class="data-table factor-table" id="qualityTable"><thead><tr><th>Factor</th><th>Status</th></tr></thead><tbody></tbody></table>
+      </aside>
+
+      <section class="card instruments-card">
+        <div class="card-pill">Instrumentos con mayor recurrencia</div>
+        <div id="instrumentBars" class="instrument-bars"></div>
+        <div class="instrument-footer">
+          <button id="toggleInstruments" class="link-button">+ ver más</button>
+          <span class="legend-text">Haz clic en una barra para ver los instrumentos y herramientas que pertenecen a ese tipo.</span>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
