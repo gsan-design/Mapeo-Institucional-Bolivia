@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle por tipo de instrumento</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell secondary-shell">
+    <header class="hero-header secondary-header">
+      <div><a href="index.html" class="back-link">← Volver al dashboard</a><h1 id="detailTitle">Detalle por tipo de instrumento</h1><p id="detailSubtitle">Listado de instrumentos y herramientas asociados</p></div>
+    </header>
+    <section class="filter-bar"><label for="typeSelect">Tipo de instrumento</label><select id="typeSelect"></select><button id="goType" class="primary-button">Ver detalle</button></section>
+    <section class="detail-summary-grid">
+      <div class="mini-card"><span class="mini-label">Categoría analítica</span><strong id="detailCategory">—</strong></div>
+      <div class="mini-card"><span class="mini-label">Apariciones</span><strong id="detailCount">0</strong></div>
+      <div class="mini-card"><span class="mini-label">% del total</span><strong id="detailPct">0%</strong></div>
+      <div class="mini-card"><span class="mini-label">Nivel</span><strong id="detailLevel">—</strong></div>
+    </section>
+    <section class="card detail-card">
+      <div class="card-pill">Instrumentos y herramientas bajo este tipo</div>
+      <div class="table-scroll"><table class="data-table detail-table" id="detailTable"><thead><tr><th>Instrumento / herramienta</th><th>Programa</th><th>Problema asociado</th><th>Categoría del problema</th></tr></thead><tbody></tbody></table></div>
+    </section>
+  </div>
+  <script src="instrumento.js"></script>
+</body>
+</html>

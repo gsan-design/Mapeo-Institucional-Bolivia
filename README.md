@@ -1,85 +1,24 @@
-# Mapeo Institucional — Programas de apoyo a PYMES en Bolivia
+# Dashboard de Mapeo Institucional de Apoyo a PYMES
 
-Este repositorio publica el mapeo en GitHub Pages con una navegación de cuatro niveles:
+Sitio estático preparado para **GitHub Pages** con apariencia inspirada en el PDF de referencia y contenido tomado del archivo **Ficha Informativa Final- Apoyo a PYMES Bolivia (3).xlsx**.
 
-1. **Inicio:** tarjetas de programas.
-2. **Programa:** descripción, categoría principal y sectores económicos.
-3. **Sector:** problemas asociados al sector.
-4. **Problema:** detalle, hipótesis de solución e instrumentos/herramientas.
+## Archivos incluidos
+- `index.html`: dashboard principal.
+- `instrumento.html`: página de detalle por tipo de instrumento.
+- `styles.css`: estilos del dashboard.
+- `script.js`: lógica del dashboard principal.
+- `instrumento.js`: lógica de la página de detalle.
+- `data/dashboard_data.json`: datos procesados desde Excel.
 
-## Archivos principales
+## Publicación en GitHub Pages
+1. Crea un repositorio en GitHub.
+2. Sube todos los archivos de esta carpeta respetando la estructura.
+3. Ve a **Settings → Pages**.
+4. En **Build and deployment**, selecciona `Deploy from a branch`.
+5. Usa la rama `main` y la carpeta `/root`.
+6. Guarda los cambios y espera a que GitHub publique la URL.
 
-```text
-.
-├── index.html
-├── datos.json
-├── generar_sitio.py
-├── datos/
-│   └── Ficha_Informativa_Apoyo_PYMES_Bolivia.xlsx
-└── .github/
-    └── workflows/
-        └── actualizar-sitio.yml
-```
-
-## Primera actualización del repositorio
-
-Sube/reemplaza estos archivos en la rama `main`, en la raíz del repositorio.  
-Si GitHub Pages ya está configurado en **Settings → Pages → Deploy from a branch → main / (root)**, no necesitas cambiar esa configuración.
-
-## Actualizaciones futuras
-
-Mantén este nombre y ubicación para el Excel:
-
-```text
-datos/Ficha_Informativa_Apoyo_PYMES_Bolivia.xlsx
-```
-
-Cuando reemplaces ese Excel y hagas commit, el workflow de GitHub Actions ejecutará:
-
-```bash
-python generar_sitio.py
-```
-
-y actualizará automáticamente `datos.json` e `index.html`.
-
-## Hoja esperada
-
-El generador lee la hoja:
-
-```text
-Copia de Mapeo v3
-```
-
-## Lógica de lectura
-
-El sitio usa estas columnas del Excel:
-
-- Nombre del programa o instrumento
-- Período de implementación
-- Descripción
-- Categoría principal de intervención
-- Sector económico
-- Problema (específico del sector)
-- Hipótesis
-- Instrumento o herramienta
-- Descripción de intrumento o herramienta
-
-Cuando un sector no tiene información específica, el generador usa el problema/hipótesis/instrumentos del nivel genérico como respaldo. No inventa información faltante.
-
-Si un programa no tiene sector económico registrado, se muestra:
-
-```text
-Sector no especificado en la base
-```
-
-## Probar localmente
-
-Puedes abrir `index.html` directamente en el navegador. Los datos están embebidos para que funcione incluso sin un servidor local.
-
-Si modificas el Excel localmente:
-
-```bash
-python generar_sitio.py
-```
-
-y vuelve a abrir `index.html`.
+## Observaciones metodológicas
+- La evolución usa el inicio del período de implementación y, cuando falta el año en esa columna, usa `Año de creación` como respaldo.
+- La calidad y confianza de la información se calcula con **AACODS Checklist**.
+- El archivo actual de calidad reporta `Sí` en todos los criterios cargados; por eso el dashboard muestra un nivel alto.
