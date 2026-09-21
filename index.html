@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapeo Institucional de Apoyo a PYMES</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero-header">
+      <div>
+        <h1 id="dashboard-title">Mapeo Institucional de Apoyo a PYMES</h1>
+        <p id="dashboard-updated">Actualizado: 21 de septiembre de 2026</p>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="card evolution-card">
+        <div class="card-pill">Evolución de programas e instrumentos</div>
+        <div class="chart-wrap tall-chart"><canvas id="evolutionChart"></canvas></div>
+        <p class="card-note" id="evolution-note"></p>
+      </section>
+
+      <section class="card recurrence-card">
+        <div class="card-pill">Recurrencia y cobertura de problemas por categoría</div>
+        <div class="table-scroll">
+          <table class="data-table compact-table" id="recurrenceTable">
+            <thead>
+              <tr><th>Categoría</th><th>Problemas</th><th>% recurrencia</th><th>Cobertura</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="card quality-card">
+        <div class="card-pill">Nivel de confianza</div>
+        <div class="badge-label">Calidad de información</div>
+        <div class="gauge-wrapper">
+          <div class="semi-gauge" id="confidenceGauge"><div class="gauge-value" id="confidenceValue">0%</div></div>
+        </div>
+        <p class="card-note">Cálculo según AACODS Checklist: Authority, Accuracy, Coverage, Objectivity, Date y Significance.</p>
+        <div class="badge-label second-badge">Completitud de la información</div>
+        <div class="quality-metric-line"><span class="metric-strong" id="completenessValue">0%</span><span class="metric-sub">promedio de completitud documental</span></div>
+        <table class="data-table factor-table" id="qualityTable"><thead><tr><th>Factor</th><th>Status</th></tr></thead><tbody></tbody></table>
+      </aside>
+
+      <section class="card priority-card">
+        <div class="card-pill">Problemas prioritarios y respuesta disponible</div>
+        <div class="table-scroll">
+          <table class="data-table" id="priorityTable">
+            <thead>
+              <tr><th>Categoría</th><th>Tipo de instrumento más recurrente</th><th>% del total</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card instruments-card">
+        <div class="card-pill">Instrumentos con mayor recurrencia</div>
+        <div class="chart-wrap"><canvas id="instrumentChart"></canvas></div>
+        <div class="instrument-footer"><button id="toggleInstruments" class="link-button">▸ ver más</button><span class="legend-text">Haz clic en una barra para abrir el detalle de instrumentos y herramientas.</span></div>
+      </section>
+    </main>
+  </div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
