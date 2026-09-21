@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle de categoría</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell secondary-shell">
+    <header class="hero-header secondary-header">
+      <a href="index.html" class="back-link">← Volver al dashboard</a>
+      <h1 id="categoryTitle">Detalle de categoría</h1>
+      <p id="categorySubtitle"></p>
+    </header>
+
+    <section class="detail-summary-grid">
+      <div class="mini-card"><span class="mini-label">Problemas</span><strong id="categoryProblems">0</strong></div>
+      <div class="mini-card"><span class="mini-label">% recurrencia</span><strong id="categoryPct">0%</strong></div>
+      <div class="mini-card"><span class="mini-label">Soluciones</span><strong id="categorySolutions">0</strong></div>
+    </section>
+
+    <div class="tabs">
+      <button class="tab-button" id="problemsTab">Problemas específicos</button>
+      <button class="tab-button" id="solutionsTab">Soluciones asociadas</button>
+    </div>
+
+    <section class="card detail-card" id="problemsPanel">
+      <div class="card-pill">Problemas específicos de la categoría</div>
+      <ol id="problemList" class="problem-list"></ol>
+    </section>
+
+    <section class="card detail-card" id="solutionsPanel">
+      <div class="card-pill">Soluciones asociadas a la categoría</div>
+      <div class="table-scroll">
+        <table class="data-table detail-table"><thead><tr><th>Instrumento / herramienta</th><th>Tipo de instrumento</th><th>Programa</th><th>Problema asociado</th></tr></thead><tbody id="solutionsBody"></tbody></table>
+      </div>
+    </section>
+  </div>
+  <script src="data.js"></script>
+  <script src="categoria.js"></script>
+</body>
+</html>
