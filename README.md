@@ -22,3 +22,8 @@ Sitio estático preparado para **GitHub Pages** con apariencia inspirada en el P
 - La evolución usa el inicio del período de implementación y, cuando falta el año en esa columna, usa `Año de creación` como respaldo.
 - La calidad y confianza de la información se calcula con **AACODS Checklist**.
 - El archivo actual de calidad reporta `Sí` en todos los criterios cargados; por eso el dashboard muestra un nivel alto.
+
+
+## Versión corregida para GitHub Pages
+
+Esta versión incluye `data.js` en la raíz. El dashboard ya no depende de `fetch()` para leer el JSON, por lo que evita el caso en que GitHub Pages muestra la estructura visual pero deja vacíos los contenidos dinámicos. `data/dashboard_data.json` se conserva como archivo de datos reutilizable.
